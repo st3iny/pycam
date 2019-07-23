@@ -325,6 +325,7 @@ if __name__ == '__main__':
     speed_group = parser.add_mutually_exclusive_group()
     speed_group.add_argument(
         '--speed', choices=(Speed.SLOWEST, Speed.SLOW, Speed.NORMAL, Speed.FAST, Speed.FASTEST),
+        type=int,
         help='set animation speed (defaults to medium speed and only works for some modes)',
     )
     speed_group.add_argument('--slowest', action='store_const', const=Speed.SLOWEST, dest='speed',
