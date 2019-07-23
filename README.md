@@ -46,13 +46,13 @@ r = [(255, 0, 0)] * 10
 g = [(0, 255, 0)] * 10
 b = [(0, 0, 255)] * 10
 
-program = [
+animation = [
     r + g,
     b + r,
     g + b,
 ]
 
-for index, step in enumerate(program):
+for index, step in enumerate(animation):
     led.set_led(led.CustomMode.COVERING_MARQUEE, step, index=index, speed=led.Speed.FAST)
 ```
 
